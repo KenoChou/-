@@ -2,12 +2,12 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
-
+import { ScrollShadow } from "@heroui/scroll-shadow";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "../components/navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -38,15 +38,22 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-              {children}
-            </main>
+            <ScrollShadow
+              hideScrollBar
+              className="container mx-auto max-w-7xl pt-16 px-6 flex-grow"
+              offset={100}
+              orientation="horizontal"
+            >
+              <main >
+                {children}
+              </main>
+
             <footer className="w-full flex items-center justify-center py-3">
               <Link
                 isExternal
@@ -58,6 +65,8 @@ export default function RootLayout({
                 <p className="text-primary">HeroUI</p>
               </Link>
             </footer>
+            </ScrollShadow>
+
           </div>
         </Providers>
       </body>

@@ -1,9 +1,11 @@
-import { title } from "@/components/primitives";
+import { Content } from "@/components/content";
 
 export default function DocsPage() {
   return (
-    <div>
-      <h1 className={title()}>Docs</h1>
+    <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <Content />
+      <Content />
+      <Content />
     </div>
   );
 }

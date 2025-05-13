@@ -60,5 +60,6 @@ export const Content = () => (
       cillum et nulla ipsum veniam ad ipsum ad aute. Est officia duis pariatur ad eiusmod id
       voluptate.
     </p>
+    
   </div>
 );

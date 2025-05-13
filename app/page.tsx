@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import CategoryTabs from "@/components/CategoryTabs";
 import Hero from "@/components/Hero";
@@ -59,10 +59,58 @@ export default function Home() {
     <div>
       <div className="container mx-auto py-8 px-4">
         <Hero/>
-            <CategoryTabs onCategoryChange={(value) => {
-  console.log("分类切换到：", value);
-}} />
+        <CategoryTabs
+          onCategoryChange={(value) => {
+            console.log("分类切换到：", value);
+          }}
+        />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
+          {models.map((model) => (
+            <ModelCard key={model.id} model={model} />
+          ))}
           {models.map((model) => (
             <ModelCard key={model.id} model={model} />
           ))}

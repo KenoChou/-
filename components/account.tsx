@@ -28,6 +28,9 @@ export default function Account() {
         <ModalContent>
           {(onClose) => (
             <>
+              <ModalHeader className="flex flex-col gap-1">
+                Modal Title
+              </ModalHeader>
               <ModalBody>
                 <div className="flex flex-col w-full">
                   <Card className="max-w-full w-[340px] h-[400px]">

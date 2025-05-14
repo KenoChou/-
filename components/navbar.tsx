@@ -25,6 +25,7 @@ import {
   SearchIcon,
   Logo,
 } from "@/components/icons";
+import Account from "./account";
 
 export const Navbar = () => {
   const searchInput = (
@@ -77,16 +78,7 @@ export const Navbar = () => {
      
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-          
-            variant="flat"
-          >
-            登录
-          </Button>
+        <Account/>
         </NavbarItem>
       </NavbarContent>
 
